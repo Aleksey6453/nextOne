@@ -106,10 +106,6 @@ a {
   }
 }
 
-.img{
-  width: 30%;
-}
-
 .wrapPage {
   display: flex;
   flex-direction: column;
@@ -118,8 +114,22 @@ a {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 40px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   margin: 20px;
+}
+
+.header{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: black;
+}
+
+.linkHeader {
+  margin: 10px;
 }
