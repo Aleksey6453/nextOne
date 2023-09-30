@@ -105,3 +105,21 @@ a {
     color-scheme: dark;
   }
 }
+
+.img{
+  width: 30%;
+}
+
+.wrapPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  margin: 20px;
+}
