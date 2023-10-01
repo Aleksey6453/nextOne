@@ -120,16 +120,3 @@ a {
   margin: 20px;
 }
 
-.header{
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 20px;
-  background-color: black;
-}
-
-.linkHeader {
-  margin: 10px;
-}
