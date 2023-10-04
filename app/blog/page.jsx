@@ -2,7 +2,11 @@ import styles from './pageBlog.module.css'
 import Link from 'next/link'
 
 async function getDate(){
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts/')
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts/', {
+        next: {
+            revalidate: 60,
+        }
+    })
 
     return res.json()
 }
@@ -21,7 +25,7 @@ export default async function Blog() {
             <ul>
                 {posts.map(post => (
                     <li key={post.id}>
-                        <Link href={`/blog/${post.id}`}>
+                        <Link href={`/blog/${post.id}`} className='wrapPage'>
                             {post.title}
                         </Link>
                     </li>
