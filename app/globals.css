@@ -120,3 +120,20 @@ a {
   margin: 20px;
 }
 
+.active{
+  color: aqua;
+  margin: 20px;
+  cursor: pointer;
+  transition: all 2s; 
+}
+
+.linkHeader {
+  margin: 20px;
+  cursor: pointer;
+  transition: all 2s;
+}
+
+.linkHeader:hover{
+  letter-spacing: 2rem;
+}
+
