@@ -5,7 +5,8 @@ import styles from './Header.module.css'
 const navItems = [
   {label: 'Home', href: '/home'},
   {label: 'Blog', href: '/blog'},
-  {label: 'About', href: '/about'}
+  {label: 'About', href: '/about'},
+  {label: 'Game', href: '/game'}
 ]
 
 const Header = () => {

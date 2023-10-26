@@ -18,9 +18,9 @@ import { PostSearch } from '../../components/postSearch/PostSearch';
 //     return res.json()
 // }
 
-export const metadata = {
-    title: 'Blog | Next app'
-}
+// export const metadata = {
+//     title: 'Blog | Next app'
+// }
 
 export default function Blog() {
     // const posts = getDate()
