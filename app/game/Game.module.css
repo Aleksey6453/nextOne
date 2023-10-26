@@ -1,0 +1,13 @@
+.title{
+    color: lime;
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.gameField{
+    width: 300px;
+    height: 300px;
+
+}
+
