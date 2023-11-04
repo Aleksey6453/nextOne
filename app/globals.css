@@ -180,3 +180,41 @@ a {
   box-sizing: border-box;
 }
 
+.btn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: black;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 16px;
+  padding: 15px 40px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Century Gothic;
+  font-weight: 700;
+  color: white;
+  transition: all 1s;
+}
+.btn:hover {
+    text-decoration: none;
+    transition: all .8s;
+    font-weight: bolder;
+    border: 3px solid black;
+    color: black;
+    background-color: white;
+}
+.btn:active {
+  background-color: #1E1F1C;
+  border: 2px solid white;
+  color: white;
+  border-radius: 15px;
+}
+
+.m-20 {
+  margin: 20px;
+}
+

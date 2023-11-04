@@ -3,6 +3,8 @@
 import React from 'react'
 import { useState } from 'react';
 import styles from './Game.module.css'
+// import { GameInfo } from './gameComponents/GameInfo';
+import {GameBtnStart} from './gameComponents/GameBtnStart'
 
 const symbolX = 'X'
 const symbolO = 'O'
@@ -70,19 +72,19 @@ export default function Game(){
     const handleReebot = () => {
         setCells(startPosition)
         setCurrentStep(symbolX)
-        // setWinnerCombi(undefined)
+        setWinnerCombi(undefined)
     }
 
     
 
   return (
     <div className='game wrapPage'>
+        <GameBtnStart />
         <div className='gameInfo'>
-            {/* <h1>{winnerCombi ? 'WINNER!' : 'Step'}'{renderSymbol(winnerSymbol ?? currentStep)}' </h1> */}
-            {/* <h1>{(handleDraw() ? 'Not win!' : '')}</h1> */}
             {isDraw ? 'Is Draw' : winnerCombi ? 'Winner: ' : 'Step: '}
             {!isDraw && renderSymbol(winnerSymbol ?? currentStep)}
         </div>
+        {/* <GameInfo isDraw={isDraw} /> */}
         <div className={styles.gameField}>
             {cells.map((symbol, index) => {
                 const isWinner = winnerCombi?.includes(index)
@@ -97,7 +99,7 @@ export default function Game(){
             })}  
         </div>
         <button onClick={handleReebot}>Reebot</button>
-        {/* <button onClick={handleDraw}>Draw</button>  */}
+     
     </div>
   )
    
