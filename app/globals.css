@@ -214,7 +214,38 @@ a {
   border-radius: 15px;
 }
 
-.m-20 {
-  margin: 20px;
+.block{
+  box-sizing: border-box;
+  padding: 20px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gorizontal {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.cellTwo{
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+.grid {
+  margin-top: 20px;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(19, 1fr); /* 19 столбцов равной ширины */
+  grid-template-rows: repeat(19, 1fr); /* 19 строк равной высоты */
+  /* gap: 1px; Расстояние между клетками */
 }
 

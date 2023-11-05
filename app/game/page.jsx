@@ -5,6 +5,8 @@ import { useState } from 'react';
 import styles from './Game.module.css'
 // import { GameInfo } from './gameComponents/GameInfo';
 import {GameBtnStart} from './gameComponents/GameBtnStart'
+import {MyButton} from './gameComponents/uiKit/MyButton'
+import { GameField } from './gameComponents/GameField'
 
 const symbolX = 'X'
 const symbolO = 'O'
@@ -36,7 +38,7 @@ const computeWinner = (cells) => {
 
 export default function Game(){
 
-    const startPosition = Array(9).fill(null)
+    const startPosition = Array(361).fill(null)
     // const [cells, setCells] = React.useState([null, null, null, null, null, null, null, null, null])
     const [cells, setCells] = useState(startPosition)
     const [currentStep, setCurrentStep] = useState(symbolX)
@@ -79,11 +81,14 @@ export default function Game(){
 
   return (
     <div className='game wrapPage'>
-        <GameBtnStart />
-        <div className='gameInfo'>
+        {/* <GameBtnStart /> */}
+        <MyButton children = {'Start Game'} />
+       
+        <div className='gameInfo block'>
             {isDraw ? 'Is Draw' : winnerCombi ? 'Winner: ' : 'Step: '}
             {!isDraw && renderSymbol(winnerSymbol ?? currentStep)}
         </div>
+        <GameField cells={cells}/>
         {/* <GameInfo isDraw={isDraw} /> */}
         <div className={styles.gameField}>
             {cells.map((symbol, index) => {
