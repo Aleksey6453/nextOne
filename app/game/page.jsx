@@ -11,6 +11,13 @@ import { GameField } from './gameComponents/GameField'
 const symbolX = 'X'
 const symbolO = 'O'
 
+const gameSymbols = {
+    zero: 'zero',
+    cross: 'cross',
+    triangle: 'triangle',
+    square: 'square'
+}
+
 const computeWinner = (cells) => {
     const lines = [
         [0, 1, 2],
@@ -33,15 +40,28 @@ const computeWinner = (cells) => {
         }
     }
 }
+const moveOrder = [
+    gameSymbols.cross,
+    gameSymbols.zero,
+    gameSymbols.triangle,
+    gameSymbols.square
+]
+    
 
 
+
+function getNextMove(currentStep){
+    const nextMoveIndex = moveOrder.indexOf(currentStep) + 1
+    return moveOrder[nextMoveIndex] ?? moveOrder[0];
+}
 
 export default function Game(){
 
     const startPosition = Array(361).fill(null)
     // const [cells, setCells] = React.useState([null, null, null, null, null, null, null, null, null])
-    const [cells, setCells] = useState(startPosition)
-    const [currentStep, setCurrentStep] = useState(symbolX)
+    const [cells, setCells] = useState(() => startPosition)
+    const [currentStep, setCurrentStep] = useState(gameSymbols.cross)
+    const nextMove = getNextMove(currentStep)
     const [winnerCombi, setWinnerCombi] = useState()
     // const currentStep = symbolX;
     const getSymbolClassName = (symbol) => {
