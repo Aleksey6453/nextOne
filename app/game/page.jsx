@@ -3,10 +3,10 @@
 import React from 'react'
 import { useState } from 'react';
 import styles from './Game.module.css'
-// import { GameInfo } from './gameComponents/GameInfo';
 import {GameBtnStart} from './gameComponents/GameBtnStart'
 import {MyButton} from './gameComponents/uiKit/MyButton'
 import { GameField } from './gameComponents/GameField'
+import { GameInfo } from './gameComponents/GameInfo';
 
 const symbolX = 'X'
 const symbolO = 'O'
@@ -57,10 +57,10 @@ function getNextMove(currentStep){
 
 export default function Game(){
 
-    const startPosition = Array(361).fill(null)
+    const startPosition = Array(9).fill(null)
     // const [cells, setCells] = React.useState([null, null, null, null, null, null, null, null, null])
     const [cells, setCells] = useState(() => startPosition)
-    const [currentStep, setCurrentStep] = useState(gameSymbols.cross)
+    const [currentStep, setCurrentStep] = useState(symbolX)
     const nextMove = getNextMove(currentStep)
     const [winnerCombi, setWinnerCombi] = useState()
     // const currentStep = symbolX;
@@ -104,11 +104,18 @@ export default function Game(){
         {/* <GameBtnStart /> */}
         <MyButton children = {'Start Game'} />
        
-        <div className='gameInfo block'>
+        {/* <div className='gameInfo block'>
             {isDraw ? 'Is Draw' : winnerCombi ? 'Winner: ' : 'Step: '}
             {!isDraw && renderSymbol(winnerSymbol ?? currentStep)}
-        </div>
-        <GameField cells={cells}/>
+        </div> */}
+        <GameInfo currentStep={currentStep} 
+                  nextMove={nextMove} 
+                  winnerCombi={winnerCombi}
+                  renderSymbol={renderSymbol}
+                  winnerSymbol={winnerSymbol}
+                  />
+        {/* <GameField cells={cells}/> */}
+      
         {/* <GameInfo isDraw={isDraw} /> */}
         <div className={styles.gameField}>
             {cells.map((symbol, index) => {
@@ -123,7 +130,7 @@ export default function Game(){
                 )
             })}  
         </div>
-        <button onClick={handleReebot}>Reebot</button>
+        <button onClick={handleReebot} className='btn'>Reebot</button>
      
     </div>
   )
