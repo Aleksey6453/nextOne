@@ -1,5 +1,6 @@
 "use client"
 
+
 import React from 'react'
 import { useState } from 'react';
 import styles from './Game.module.css'
@@ -7,6 +8,13 @@ import {GameBtnStart} from './gameComponents/GameBtnStart'
 import {MyButton} from './gameComponents/uiKit/MyButton'
 import { GameField } from './gameComponents/GameField'
 import { GameInfo } from './gameComponents/GameInfo';
+
+export const metadata = {
+    title: 'Its game',
+    description: 'Add new game',
+}
+
+
 
 const symbolX = 'X'
 const symbolO = 'O'

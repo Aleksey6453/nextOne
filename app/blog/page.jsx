@@ -22,6 +22,7 @@ import { PostSearch } from '../../components/postSearch/PostSearch';
 //     title: 'Blog | Next app'
 // }
 
+
 export default function Blog() {
     // const posts = getDate()
     const [posts, setPosts] = useState([])
