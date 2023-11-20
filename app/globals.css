@@ -126,7 +126,7 @@ a {
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  
+
 }
 
 .title {
@@ -247,6 +247,14 @@ a {
   align-items: center;
   justify-content: space-between;
   padding-top: 10px;
+}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 50px;
+  padding-top: 20px;
 }
 
 .cellTwo{
