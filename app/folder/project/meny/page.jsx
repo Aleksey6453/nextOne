@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Button from '../components/Button'
 
 // const links = [
 //   {
@@ -45,21 +46,24 @@ const Meny = () => {
     },
     {
       id: 4,
-      title: "Four",
-      url: "/four"
+      title: "Testfolder",
+      url: "/testfolder"
     },
   ]
   
   return (
     <div>
       <h1>Meny</h1>
-        <nav>
+        <nav className='gorizontal'>
           <Link href='/'>HomeApp</Link>
           <div>
             {links.map(link => (
               <Link key={link.id} href={link.url} className='m-10'>{link.title}</Link>
             ))}   
           </div>
+          {/* <button className="btn" onClick={()=> console.log('LogOut')}>Logout</button> */}
+          <Button className='m-10' text={'Logout'} url={'/'}/>
+          
         </nav>
        
        

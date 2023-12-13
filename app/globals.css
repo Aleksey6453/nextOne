@@ -280,3 +280,25 @@ a {
   margin: 10px;
 }
 
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.input{
+  padding: 15px;
+  font-size: 20px;
+  margin-right: 20px;
+  width: 100%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.ilustration{
+  width: 20%;
+  min-width: 100px;
+}
+
