@@ -12,6 +12,7 @@ export default function Folder () {
       <h1>New Folder!</h1>
       <h3><Link href='/folder/new'>Posts</Link></h3>
       <h2><Link href='/folder/project'>Project</Link></h2>
+      <h2><Link href='/folder/dashbord'>DashBord</Link></h2>
     </div>
   )
 }
