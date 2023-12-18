@@ -9,8 +9,9 @@ export const GET = async(request) => {
         const posts = await Post.find()
 
         return new NextResponse(posts, {status: 200})
+
     }catch(error){
-        return new NextResponse('Error in response of db', {status: 500})
+        return new NextResponse('Error in response of DB', {status: 500})
     }
 }
 
