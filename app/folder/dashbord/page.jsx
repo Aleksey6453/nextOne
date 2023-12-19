@@ -4,6 +4,14 @@ import React from 'react'
 import useSWR from 'swr'
 import {useState, useEffect} from 'react'
 
+
+export const metadata = {
+  title: 'Its dashbord',
+  description: 'DashBord',
+}
+
+
+
 const Dashbord = () => {
     // const [data, setData] = useState([])
     // const [error, setError] = useState(false)
